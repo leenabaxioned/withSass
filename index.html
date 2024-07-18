@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!-- If multi-language site, reconsider usage of html lang declaration here. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Template3 With SASS</title>
+    <!-- View-port Basics: http://mzl.la/VYREaP -->
+    <!-- This meta tag is used for mobile device to display the page without any zooming,
+       so how much the device is able to fit on the screen is what's shown initially. 
+       Remove comments from this tag, when you want to apply media queries to the website. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!--font-awesome link for icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+     <!-- Material Icon CDN -->
+     <link
+     href="https://fonts.googleapis.com/icon?family=Material+Icons"
+     rel="stylesheet"
+   />
+    <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
+    <link rel="stylesheet" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" media="screen" href="assets/scss/style.scss" />
+  </head>
+  <body>
+    <!-- container starts -->
+    <div class="container">
+      <!-- header starts -->
+      <header>
+        <div class="wrapper">
+          <div class="bookmark">
+            <span>Pull me</span>
+          </div>
+          <div class="main-header">
+            <h1 class="logo-heading">
+              <a href="#FIXME" title="logo"
+                ><img
+                  id="logo"
+                  src="https://placehold.jp/274x72.png"
+                  alt="logo"
+              /></a>
+            </h1>
+            <nav class="head-nav">
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a href="#FIXME" class="nav-link active" title="Home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#FIXME" class="nav-link" title="News">News</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#FIXME" class="nav-link" title="Products"
+                    >Products</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#FIXME" class="nav-link" title="Features"
+                    >Features</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#FIXME" class="nav-link" title="Contact">Contact</a>
+                </li>
+              </ul>
+              <button class="hamburger">
+                <!-- material icons https://material.io/resources/icons/ -->
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- header ends -->
+      <main>
+        <!-- banner starts -->
+        <div class="banner">
+          <div class="banner-img">
+            <figure>
+              <img
+                id="banner-img"
+                src="https://placehold.jp/1300x420.png"
+                alt="banner"
+              />
+            </figure>
+            <div class="banner-content wrapper">
+              <span class="arrowleft">arrowleft</span>
+              <h2 class="headline">
+                add lovely captions to each slide and make your busniness stand
+                out
+              </h2>
+              <span class="arrowright">arrowright</span>
+            </div>
+          </div>
+        </div>
+        <!-- banner ends -->
+        <!-- business theme section starts -->
+        <section class="business">
+          <div class="wrapper">
+            <h2>welcome to elegantica - a minimal business theme</h2>
+            <div class="logos">
+              <div class="featurelogo">
+                <span class="support">Recycle</span>
+                <h3>Amazing <span>Support</span></h3>
+              </div>
+              <div class="featurelogo">
+                <span class="call">Call</span>
+                <h3>24 Hour <span>Availability</span></h3>
+              </div>
+              <div class="featurelogo">
+                <span class="Web">Web</span>
+                <h3>Web <span>Design</span></h3>
+              </div>
+              <div class="featurelogo">
+                <span class="mobile">mobile</span>
+                <h3>Mobile <span>Development</span></h3>
+              </div>
+            </div>
+            <div class="porfolio">
+              <h2>Recent from <span class="sectionhighlight">portfolio</span></h2>
+              <div class="porfolio-cards">
+              <div class="cards">
+                <figure>
+                  <img
+                    class="card-img"
+                    src="https://placehold.jp/230x150.png"
+                    alt="cardimg"
+                  />
+                  <div class="overlay-text"><span class="search">Search</span></div>
+                </figure>
+                <div class="card-content">
+                  <h3>business cards</h3>
+                  <a class="video btn" href="#FIXME" title="video" target="_self"
+                    >Video</a
+                  >
+                  <a
+                    class="interview btn"
+                    href="#FIXME"
+                    title="interview"
+                    target="_self"
+                    >Interview</a
+                  >
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptates esse animi, accusantium ex enim.
+                  </p>
+                </div>
+              </div>
+              <div class="cards">
+                <figure>
+                  <img
+                    class="card-img"
+                    src="https://placehold.jp/230x150.png"
+                    alt="cardimg"
+                  />
+                  <div class="overlay-text"><span class="search">Search</span></div>
+                </figure>
+                <div class="card-content">
+                  <h3>moo minicards</h3>
+                  <a class="video btn" href="#FIXME" title="video" target="_self"
+                    >Video</a
+                  >
+                  <a
+                    class="business btn"
+                    href="#FIXME"
+                    title="business"
+                    target="_self"
+                    >Business</a
+                  >
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptates esse animi, accusantium ex enim.
+                  </p>
+                </div>
+              </div>
+              <div class="cards">
+                <figure>
+                  <img
+                    class="card-img"
+                    src="https://placehold.jp/230x150.png"
+                    alt="cardimg"
+                  />
+                  <div class="overlay-text"><span class="search">Search</span></div>
+                </figure>
+                <div class="card-content">
+                  <h3>say it in print</h3>
+                  <a class="audio btn" href="#FIXME" title="audio" target="_self"
+                    >Audio</a
+                  >
+                  <a class="print btn" href="#FIXME" title="print" target="_self"
+                    >Print</a
+                  >
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptates esse animi, accusantium ex enim.
+                  </p>
+                </div>
+              </div>
+              <div class="cards">
+                <figure>
+                  <img
+                    class="card-img"
+                    src="https://placehold.jp/230x150.png"
+                    alt="cardimg"
+                  />
+                  <div class="overlay-text"><span class="search">Search</span></div>
+                </figure>
+                <div class="card-content">
+                  <h3>graphics in print</h3>
+                  <a class="video btn" href="#FIXME" title="video" target="_self"
+                    >Video</a
+                  >
+                  <a
+                    class="graphics btn"
+                    href="#FIXME"
+                    title="graphics"
+                    target="_self"
+                    >Graphics</a
+                  >
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptates esse animi, accusantium ex enim.
+                  </p>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="advertiser">
+              <h2>Our Major <span class="sectionhighlight">Advertisers</span></h2>
+              <div class="advertiser-imgs">
+                <figure>
+                  <img
+                    class="advertiser-img"
+                    src="https://placehold.jp/145x132.png"
+                    alt="advertiserimg"
+                  />
+                </figure>
+                <figure>
+                  <img
+                    class="advertiser-img"
+                    src="https://placehold.jp/145x132.png"
+                    alt="advertiserimg"
+                  />
+                </figure>
+                <figure>
+                  <img
+                    class="advertiser-img"
+                    src="https://placehold.jp/145x132.png"
+                    alt="advertiserimg"
+                  />
+                </figure>
+                <figure>
+                  <img
+                    class="advertiser-img"
+                    src="https://placehold.jp/145x132.png"
+                    alt="advertiserimg"
+                  />
+                </figure>
+                <figure>
+                  <img
+                    class="advertiser-img"
+                    src="https://placehold.jp/145x132.png"
+                    alt="advertiserimg"
+                  />
+                </figure>
+                <figure>
+                  <img
+                    class="advertiser-img"
+                    src="https://placehold.jp/145x132.png"
+                    alt="advertiserimg"
+                  />
+                </figure>
+              </div>
+            </div>
+            <div class="scroll">
+              <a class="scrollarrow" href="#FIXME" title="scroll" target="_self"
+                >scroll</a
+              >
+            </div>
+          </div>
+        </section>
+        <!-- business theme section starts -->
+      </main>
+      <!-- footer starts -->
+      <footer>
+        <div class="foot-top">
+          <div class="wrapper">
+            <div class="about">
+              <h3>little about us</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
+                facere nesciunt debitis recusandae at, veritatis laudantium vel
+                explicabo veniam sunt officia ipsum sit autem.
+              </p>
+              <h3 class="follow">follow us</h3>
+              <ul class="footersocial-icons">
+                <li>
+                  <a
+                    href="#FIXME"
+                    class="footersocial facebook"
+                    title="Facebook"
+                    >Facebook</a
+                  >
+                </li>
+                <li>
+                  <a href="#FIXME" class="footersocial twitter" title="Twitter"
+                    >Twitter</a
+                  >
+                </li>
+                <li>
+                  <a href="#FIXME" class="footersocial linkedin" title="Wifi"
+                    >Wifi</a
+                  >
+                </li>
+                <li>
+                  <a href="#FIXME" class="footersocial V" title="V">V</a>
+                </li>
+                <li>
+                  <a href="#FIXME" class="footersocial network" title="network"
+                    >Network</a
+                  >
+                </li>
+                <li>
+                  <a href="#FIXME" class="footersocial people" title="People"
+                    >People</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="archives">
+              <h3>Archives</h3>
+              <ul class="month-year">
+                <li>March 2012</li>
+                <li>February 2012</li>
+                <li>Jamuary 2012</li>
+                <li>December 2012</li>
+              </ul>
+            </div>
+            <div class="contact">
+              <h3>contact us</h3>
+              <ul class="contact-info">
+                <li>
+                  <a
+                    class="mail-to"
+                    href="mailto:info@premiumcoding.com"
+                    title="Mailto"
+                    target="_blank"
+                    >info@premiumcoding.com</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="call"
+                    href="tel:800756156"
+                    title="Callto"
+                    target="_blank"
+                    >800 756 156</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="callto"
+                    href="tel:+386408007561"
+                    title="Callto"
+                    target="_blank"
+                    >+386408007561</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="newsletter">
+              <h3>Sign to newsletter</h3>
+              <form>
+                <div class="firstname">
+                  <input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="email-id">
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <a
+                  class="subscribe"
+                  href="#FIXME"
+                  title="Subscribe"
+                  target="_self"
+                  >Subscribe</a
+                >
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="foot-bottom">
+          <div class="wrapper">
+            <nav class="bottom-nav">
+              <ul class="footnav-menu">
+                <li>
+                  <a href="#FIXME" class="nav-link active" title="Home">Home</a>
+                </li>
+                <li>
+                  <a href="#FIXME" class="nav-link" title="Porfolio"
+                    >Porfolio</a
+                  >
+                </li>
+                <li>
+                  <a href="#FIXME" class="nav-link" title="Products"
+                    >Products</a
+                  >
+                </li>
+                <li>
+                  <a href="#FIXME" class="nav-link" title="Contact">Contact</a>
+                </li>
+              </ul>
+              <h2>@2013 All Rights Reserved</h2>
+            </nav>
+          </div>
+        </div>
+      </footer>
+      <!-- footer ends -->
+    </div>
+    <!-- container ends -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

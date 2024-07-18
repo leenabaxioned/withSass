@@ -1,0 +1,367 @@
+/*=================================
+  main styling starts here
+=================================*/
+.business {
+  padding-bottom: 90px;
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.business h2 {
+  padding: 25px;
+  font-size: 23px;
+  text-transform: uppercase;
+
+  &::after {
+    display: inline-block;
+    content: "";
+    border-top: 2px dashed #dddddd;
+    width: 100%;
+    transform: translateY(5px);
+  }
+}
+
+//-----------------------logos styling starts here
+.logos {
+  @extend %flex-styling;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.featurelogo h3 {
+  padding: 10px 0;
+  font-size: 25px;
+  text-transform: uppercase;
+
+  span {
+    display: block;
+    font-size: 15px;
+    text-transform: none;
+  }
+}
+
+.support,
+.featurelogo .call,
+.Web,
+.mobile {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  text-indent: -9999px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+.support::after,
+.featurelogo .call::after,
+.Web::after,
+.mobile::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "FontAwesome";
+  width: 115px;
+  height: 115px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: $palegreen;
+  color: #fff;
+  font-size: 65px;
+  text-indent: 0;
+}
+
+.support::after {
+  content: "\f1b8";
+}
+.featurelogo .call::after {
+  content: "\f095";
+}
+.Web::after {
+  content: "\f013";
+}
+.mobile::after {
+  content: "\f10b";
+}
+//-----------------------logos styling ends here
+//-----------------------portfolio styling starts here
+.porfolio h2 {
+  padding: 20px 0 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+
+  &::after {
+    display: inline-block;
+    content: "";
+    border-top: 2px dashed #dddddd;
+    width: 60%;
+    transform: translate(15px, -6px);
+  }
+
+  &::before {
+    display: inline-block;
+    content: "";
+    border-top: 2px dashed #dddddd;
+    width: 3%;
+    transform: translate(-15px, -6px);
+  }
+}
+
+.porfolio-cards {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .cards {
+    display: flex;
+    gap: 5px;
+    flex-basis: 48%;
+    border: 1px solid #ccc;
+
+    .card-content {
+      flex-basis: 50%;
+      padding: 10px 10px 0 10px;
+
+      h3 {
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 11px;
+        line-height: 1.3;
+      }
+    }
+  }
+}
+
+.cards figure {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.overlay-text {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 190px;
+  height: 126px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+
+.search {
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    text-indent: -9999px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 4px solid #ccc;
+    background-color: #45B5BB;
+}
+
+.search::before {
+  @include icon-style("\f002", #fff, 20px);
+}
+
+.cards figure:hover .overlay-text{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 2px 10px;
+  margin: 7px 0;
+  border: 1px solid transparent;
+  background-color: $palegreen;
+  color: #fff;
+  font-size: 11px;
+  transition: all 0.3s;
+
+  &:hover {
+    border: 1px solid $palegreen;
+    background-color: #fff;
+    color: $palegreen;
+  }
+}
+
+.sectionhighlight {
+  color: $palegreen;
+}
+//-----------------------portfolio styling ends here
+//-----------------------advertiser styling starts here
+.advertiser h2 {
+  padding: 20px 0 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+
+  &::after {
+    display: inline-block;
+    content: "";
+    border-top: 2px dashed #dddddd;
+    width: 60%;
+    transform: translate(15px, -6px);
+  }
+
+  &::before {
+    display: inline-block;
+    content: "";
+    border-top: 2px dashed #dddddd;
+    width: 3%;
+    transform: translate(-15px, -6px);
+  }
+}
+
+.advertiser-imgs {
+  display: flex;
+}
+
+main {
+  position: relative;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 1%;
+  right: 21%;
+}
+
+.scrollarrow {
+  display: flex;
+  text-indent: -9999px;
+}
+
+.scrollarrow::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "FontAwesome";
+  content: "\3c";
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: $palegreen;
+  font-size: 20px;
+  transform: rotate(90deg);
+  text-indent: 0px;
+}
+
+//-----------------------advertiser styling ends here
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*media query starts*/
+/*media query for 1280px starts here*/
+@media only screen and (max-width: 1280px) {
+  .porfolio-cards { justify-content: center; }
+  .porfolio-cards .cards { flex-basis: 60%; }
+
+  .porfolio-cards .cards .card-content {
+    flex-basis: 55%;
+    padding: 10px 0 0 10px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .banner-content .headline,
+  .business h2 { font-size: 17px; }
+
+  .support::after, .featurelogo .call::after, .Web::after, .mobile::after {
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+  }
+
+  .support, .featurelogo .call, .Web, .mobile { padding: 10px; }
+  .porfolio h2::after,
+  .advertiser h2::after { width: 50%; }
+}
+
+@media only screen and (max-width: 995px) {
+  .banner-content .headline,
+  .business h2 { font-size: 16px; }
+  .featurelogo h3 { font-size: 15px; }
+  .featurelogo h3 span { font-size: 12px; }
+  .porfolio h2::after,
+  .advertiser h2::after { width: 40%; }
+  .porfolio-cards .cards { flex-basis: 100%; }
+}
+
+@media only screen and (max-width: 768px) { 
+  .banner-content .headline {
+    width: 50%;
+    font-size: 15px;
+  }     
+
+  .business h2 { font-size: 13px; }
+
+  .logos {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .advertiser-imgs {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .advertiser-imgs figure { flex-basis: 30%; }
+}    
+
+@media only screen and (max-width: 680px) { 
+  .banner-content { top: 2%; }
+  .banner-content .headline { font-size: 13px; }
+  .banner-content span::before {
+    width: 25px;
+    height: 25px;
+    border: 3px solid #fff;
+    font-size: 15px;
+  }
+
+  .logos { gap: 40px; }
+  .porfolio-cards .cards .card-content h3 { font-size: 12px; }
+}
+
+@media only screen and (max-width: 480px) { 
+  .banner-content .headline { font-size: 10px; }
+  .banner-content { top: 0; }
+  .featurelogo h3 { font-size: 12px; }
+  .featurelogo h3 span { font-size: 10px; }
+  .porfolio h2::after, .advertiser h2::after { width: 25%; }
+  .porfolio-cards .cards .card-content h3 { font-size: 10px; }
+  .btn { 
+    padding: 2px 5px;
+    margin: 3px 0;
+    font-size: 8px; 
+  }
+
+  .porfolio-cards .cards .card-content p {
+    font-size: 9px;
+    line-height: 1;
+  }
+  .support, .featurelogo .call, .Web, .mobile { padding: 6px; }
+  .support::after, .featurelogo .call::after, .Web::after, .mobile::after {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width:375px) {  
+  .banner-content .headline { width: 70%; }
+  .porfolio h2::after, .advertiser h2::after { width: 15%; }
+  .porfolio-cards .cards { flex-direction: column; }
+  .porfolio-cards .cards .card-content { padding: 5px; }
+}
+/*media query ends*/

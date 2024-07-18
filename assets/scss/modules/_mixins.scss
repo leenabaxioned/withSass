@@ -1,0 +1,7 @@
+@mixin icon-style($icon-code, $color: #fff, $font-size: 20px) {
+    font-family: "FontAwesome";
+    content: $icon-code;
+    color: $color;
+    font-size: $font-size;
+    text-indent: 0;
+  }

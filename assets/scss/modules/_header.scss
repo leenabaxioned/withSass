@@ -1,0 +1,94 @@
+/*=================================
+  Header styling starts here
+=================================*/
+.bookmark {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 9px;
+    text-transform: uppercase;
+    span {
+        display: flex;
+        gap: 10px;
+        &::after {
+            font-family: "FontAwesome";
+            content:"\f02e";
+            color: $palegreen;
+            font-size: 13px;
+            text-indent: 0;
+        }
+    }
+ }  
+
+.main-header {
+    @extend %flex-styling; 
+    padding-bottom: 3px;
+}
+
+.head-nav {
+    flex-basis: 46%;
+
+    .nav-menu{
+        @extend %flex-styling;
+        li a {
+            color: #000;
+            font-size: 10px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+    
+            &:hover {
+                color: #999999;
+            }
+        }
+    }
+}
+
+.hamburger { display: none; }
+
+/*=================================
+  Header styling ends here
+=================================*/
+
+@media only screen and (max-width: 995px) { 
+  .hamburger {
+    position: absolute;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    padding: 2px;
+    background: $palegreen;
+    border-color: transparent;
+    cursor: pointer;
+    display: block;
+    }
+     
+    .material-icons { color: #fff; }
+    .closeIcon { display: none; }
+  
+   .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 4rem;
+    z-index: 99;
+    background: $palegreen;
+    color: #fff;
+    list-style: none;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    }
+
+    .head-nav .nav-menu { justify-content: center; }
+    .head-nav .nav-menu li a:hover { color: #fff; }
+    .head-nav .nav-menu li a { color: #fff; }
+    .showMenu { transform: translateY(0); }
+}
+
+@media only screen and (max-width: 480px) {
+  .material-icons { font-size: 20px; }
+ }
