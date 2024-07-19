@@ -44,10 +44,8 @@
 .featurelogo .call,
 .Web,
 .mobile {
-  display: flex;
+  @include flex-properties(center, center);
   padding: 15px;
-  justify-content: center;
-  align-items: center;
   text-indent: -9999px;
   border: 1px solid #ccc;
   border-radius: 50%;
@@ -57,16 +55,14 @@
 .featurelogo .call::after,
 .Web::after,
 .mobile::after {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-properties(center, center);
   font-family: "FontAwesome";
   width: 115px;
   height: 115px;
   border: 1px solid transparent;
   border-radius: 50%;
   background-color: $palegreen;
-  color: #fff;
+  color: $white;
   font-size: 65px;
   text-indent: 0;
 }
@@ -155,25 +151,21 @@
 }
 
 .search {
- display: flex;
-    justify-content: center;
-    align-items: center;
-    text-indent: -9999px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 4px solid #ccc;
-    background-color: #45B5BB;
+  @include flex-properties(center, center);
+  text-indent: -9999px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  background-color: #45b5bb;
 }
 
 .search::before {
-  @include icon-style("\f002", #fff, 20px);
+  @include icon-style("\f002", $white, 20px);
 }
 
-.cards figure:hover .overlay-text{ 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.cards figure:hover .overlay-text {
+  @include flex-properties(center, center);
 }
 
 .btn {
@@ -181,13 +173,13 @@
   margin: 7px 0;
   border: 1px solid transparent;
   background-color: $palegreen;
-  color: #fff;
+  color: $white;
   font-size: 11px;
   transition: all 0.3s;
 
   &:hover {
     border: 1px solid $palegreen;
-    background-color: #fff;
+    background-color: $white;
     color: $palegreen;
   }
 }
@@ -239,15 +231,13 @@ main {
 }
 
 .scrollarrow::before {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-properties(center, center);
   font-family: "FontAwesome";
   content: "\3c";
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  color: #fff;
+  color: $white;
   background-color: $palegreen;
   font-size: 20px;
   transform: rotate(90deg);
@@ -263,8 +253,12 @@ main {
 /*media query starts*/
 /*media query for 1280px starts here*/
 @media only screen and (max-width: 1280px) {
-  .porfolio-cards { justify-content: center; }
-  .porfolio-cards .cards { flex-basis: 60%; }
+  .porfolio-cards {
+    justify-content: center;
+  }
+  .porfolio-cards .cards {
+    flex-basis: 60%;
+  }
 
   .porfolio-cards .cards .card-content {
     flex-basis: 55%;
@@ -274,36 +268,60 @@ main {
 
 @media only screen and (max-width: 1024px) {
   .banner-content .headline,
-  .business h2 { font-size: 17px; }
+  .business h2 {
+    font-size: 17px;
+  }
 
-  .support::after, .featurelogo .call::after, .Web::after, .mobile::after {
+  .support::after,
+  .featurelogo .call::after,
+  .Web::after,
+  .mobile::after {
     width: 80px;
     height: 80px;
     font-size: 50px;
   }
 
-  .support, .featurelogo .call, .Web, .mobile { padding: 10px; }
+  .support,
+  .featurelogo .call,
+  .Web,
+  .mobile {
+    padding: 10px;
+  }
   .porfolio h2::after,
-  .advertiser h2::after { width: 50%; }
+  .advertiser h2::after {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 995px) {
   .banner-content .headline,
-  .business h2 { font-size: 16px; }
-  .featurelogo h3 { font-size: 15px; }
-  .featurelogo h3 span { font-size: 12px; }
+  .business h2 {
+    font-size: 16px;
+  }
+  .featurelogo h3 {
+    font-size: 15px;
+  }
+  .featurelogo h3 span {
+    font-size: 12px;
+  }
   .porfolio h2::after,
-  .advertiser h2::after { width: 40%; }
-  .porfolio-cards .cards { flex-basis: 100%; }
+  .advertiser h2::after {
+    width: 40%;
+  }
+  .porfolio-cards .cards {
+    flex-basis: 100%;
+  }
 }
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 768px) {
   .banner-content .headline {
     width: 50%;
     font-size: 15px;
-  }     
+  }
 
-  .business h2 { font-size: 13px; }
+  .business h2 {
+    font-size: 13px;
+  }
 
   .logos {
     justify-content: center;
@@ -316,52 +334,92 @@ main {
     gap: 10px;
   }
 
-  .advertiser-imgs figure { flex-basis: 30%; }
-}    
+  .advertiser-imgs figure {
+    flex-basis: 30%;
+  }
+}
 
-@media only screen and (max-width: 680px) { 
-  .banner-content { top: 2%; }
-  .banner-content .headline { font-size: 13px; }
+@media only screen and (max-width: 680px) {
+  .banner-content {
+    top: 2%;
+  }
+  .banner-content .headline {
+    font-size: 13px;
+  }
   .banner-content span::before {
     width: 25px;
     height: 25px;
-    border: 3px solid #fff;
+    border: 3px solid $white;
     font-size: 15px;
   }
 
-  .logos { gap: 40px; }
-  .porfolio-cards .cards .card-content h3 { font-size: 12px; }
+  .logos {
+    gap: 40px;
+  }
+  .porfolio-cards .cards .card-content h3 {
+    font-size: 12px;
+  }
 }
 
-@media only screen and (max-width: 480px) { 
-  .banner-content .headline { font-size: 10px; }
-  .banner-content { top: 0; }
-  .featurelogo h3 { font-size: 12px; }
-  .featurelogo h3 span { font-size: 10px; }
-  .porfolio h2::after, .advertiser h2::after { width: 25%; }
-  .porfolio-cards .cards .card-content h3 { font-size: 10px; }
-  .btn { 
+@media only screen and (max-width: 480px) {
+  .banner-content .headline {
+    font-size: 10px;
+  }
+  .banner-content {
+    top: 0;
+  }
+  .featurelogo h3 {
+    font-size: 12px;
+  }
+  .featurelogo h3 span {
+    font-size: 10px;
+  }
+  .porfolio h2::after,
+  .advertiser h2::after {
+    width: 25%;
+  }
+  .porfolio-cards .cards .card-content h3 {
+    font-size: 10px;
+  }
+  .btn {
     padding: 2px 5px;
     margin: 3px 0;
-    font-size: 8px; 
+    font-size: 8px;
   }
 
   .porfolio-cards .cards .card-content p {
     font-size: 9px;
     line-height: 1;
   }
-  .support, .featurelogo .call, .Web, .mobile { padding: 6px; }
-  .support::after, .featurelogo .call::after, .Web::after, .mobile::after {
+  .support,
+  .featurelogo .call,
+  .Web,
+  .mobile {
+    padding: 6px;
+  }
+  .support::after,
+  .featurelogo .call::after,
+  .Web::after,
+  .mobile::after {
     width: 50px;
     height: 50px;
     font-size: 25px;
   }
 }
 
-@media only screen and (max-width:375px) {  
-  .banner-content .headline { width: 70%; }
-  .porfolio h2::after, .advertiser h2::after { width: 15%; }
-  .porfolio-cards .cards { flex-direction: column; }
-  .porfolio-cards .cards .card-content { padding: 5px; }
+@media only screen and (max-width: 375px) {
+  .banner-content .headline {
+    width: 70%;
+  }
+  .porfolio h2::after,
+  .advertiser h2::after {
+    width: 15%;
+  }
+  .porfolio-cards .cards {
+    flex-direction: column;
+  }
+  .porfolio-cards .cards .card-content {
+    padding: 5px;
+  }
 }
 /*media query ends*/

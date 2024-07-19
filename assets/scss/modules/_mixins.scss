@@ -1,7 +1,13 @@
 @mixin icon-style($icon-code, $color: #fff, $font-size: 20px) {
-    font-family: "FontAwesome";
-    content: $icon-code;
-    color: $color;
-    font-size: $font-size;
-    text-indent: 0;
-  }
+  font-family: "FontAwesome";
+  content: $icon-code;
+  color: $color;
+  font-size: $font-size;
+  text-indent: 0;
+}
+
+@mixin flex-properties($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
